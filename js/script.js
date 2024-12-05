@@ -9,12 +9,14 @@ btnDropDown.addEventListener("click", openDropdown);
 dropDown.addEventListener("mouseleave", openDropdown);
 
 const header = document.getElementById("js-header");
-
+const menuIcon = document.querySelector(".js-icon-mobile");
 function fixedMenu() {
   if (scrollY > 80) {
     header.classList.add("fixed-menu");
+    menuIcon.src = "../img/btn-mobile-color.svg";
   } else {
     header.classList.remove("fixed-menu");
+    menuIcon.src = "../img/btn-mobile.svg";
   }
 }
 
